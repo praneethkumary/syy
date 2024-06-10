@@ -1,0 +1,10 @@
+FROM nginx:alpine
+COPY . /user/share/nginx/html
+(or)
+FROM python
+WORKDIR /app/
+COPY . /app
+CMD ["python","app.py"]
+cmds
+docker build -t name .
+docker run -d -p 1010:80 name
